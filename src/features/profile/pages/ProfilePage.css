@@ -1,0 +1,268 @@
+/* ─── ЗАГАЛЬНІ СТИЛІ ─── */
+.profile-main {
+  background-color: #FAFAF8;
+  min-height: 100vh;
+}
+
+/* ─── АВАТАР ─── */
+.profile-avatar {
+  border-radius: 50%;
+  background: #B7906C;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ─── БЕЙДЖ СТАТУСУ ─── */
+.profile-status-badge {
+  border-radius: 50rem;
+  padding: 6px 14px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+.badge-pending { background: #fef3c7; color: #b07a00; }
+.badge-confirmed { background: #d4edda; color: #155724; }
+.badge-cancelled { background: #f8d7da; color: #721c24; }
+
+/* ─── КАРТКА ЗАМОВЛЕННЯ ─── */
+.order-card {
+  padding: 1.75rem;
+  border-radius: 1.25rem;
+  background-color: #fff;
+  transition: opacity 4.5s ease, transform 4.5s ease;
+}
+.order-card.removing {
+  opacity: 0;
+  transform: scale(0.97);
+}
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.75rem;
+}
+.order-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  margin-bottom: 6px;
+  color: #2C3E50;
+}
+.order-meta {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
+.order-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+.order-grid-label {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.order-grid-value {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #2b2b2b;
+}
+.order-action-row {
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Кнопки замовлення */
+.btn-cancel-outline {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #dc3545;
+  background: transparent;
+  border: 1.5px solid #dc3545;
+  border-radius: 0.5rem;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-cancel-outline:hover {
+  color: #fff;
+  background: #dc3545;
+}
+.btn-danger-solid {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  background: #dc3545;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+.btn-secondary-outline {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6c757d;
+  background: transparent;
+  border: 1.5px solid #6c757d;
+  border-radius: 0.5rem;
+  padding: 10px 24px;
+  cursor: pointer;
+}
+
+/* Блок підтвердження скасування */
+.order-confirm-box {
+  margin-top: 1.25rem;
+  padding: 1.5rem;
+  background: #f8d7da;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+}
+
+/* ─── ФОРМИ (Особисті дані та Пароль) ─── */
+.profile-form-card {
+  border-radius: 1.25rem;
+  padding: 3rem;
+  background: #fff;
+}
+.profile-label {
+  font-size: 1.15rem;
+  color: #495057;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.profile-input {
+  padding: 1rem 1.25rem;
+  font-size: 1.15rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e9ecef;
+}
+.profile-input[readonly] {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ─── МАКЕТ СТОРІНКИ ПРОФІЛЮ ─── */
+.profile-unauth {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.profile-header-section {
+  background: #fff;
+  border-bottom: 1px solid #e9ecef;
+  padding: 3.5rem 0;
+}
+.profile-header-content {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  flex-wrap: wrap;
+}
+.profile-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.25rem;
+  margin-bottom: 8px;
+  color: #2C3E50;
+}
+.profile-body-section {
+  padding: 4rem 0 6rem;
+}
+.profile-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #2C3E50;
+}
+
+/* ─── НАВІГАЦІЯ (ТАБИ) ─── */
+.profile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.profile-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  background: transparent;
+  color: #495057;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
+}
+.profile-nav-btn.active {
+  background: #B7906C;
+  color: #fff;
+  font-weight: 600;
+}
+.profile-nav-badge {
+  border-radius: 50rem;
+  padding: 3px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-width: 28px;
+  text-align: center;
+}
+.profile-nav-badge.active {
+  background: #fff;
+  color: #B7906C;
+}
+.profile-nav-badge.inactive {
+  background: #B7906C;
+  color: #fff;
+}
+
+/* Кнопка виходу */
+.profile-signout-wrap {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+.btn-signout {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0.75rem;
+  border: 1.5px solid #dc3545;
+  cursor: pointer;
+  background: transparent;
+  color: #dc3545;
+  font-size: 1.05rem;
+  font-weight: 500;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.btn-signout:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+/* ─── ПОРОЖНІЙ СТАН ЗАМОВЛЕНЬ ─── */
+.orders-empty-state {
+  text-align: center;
+  padding: 5rem 2rem;
+  border-radius: 1.25rem;
+}

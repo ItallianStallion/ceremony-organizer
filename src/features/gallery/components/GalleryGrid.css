@@ -1,0 +1,116 @@
+/* ─── АНІМАЦІЇ ─── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+/* ─── ЛАЙТБОКС (Модальне вікно для фото) ─── */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4, 1rem);
+  cursor: zoom-out;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg, 12px);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  animation: scaleUp 0.2s ease-out;
+  cursor: default; /* Курсор на самому фото звичайний */
+}
+
+.lightbox-close-btn {
+  position: fixed;
+  top: 16px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  color: #fff;
+  border-radius: var(--radius-full, 50%);
+  width: 40px;
+  height: 40px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* ─── СІТКА ГАЛЕРЕЇ ─── */
+.gallery-item {
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f8f9fa;
+  /* Додаємо плавну тінь при наведенні */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Ефект зуму всередині рамки при наведенні */
+.gallery-item:hover .gallery-image {
+  transform: scale(1.05);
+}
+
+/* ─── СТАНИ ЗАВАНТАЖЕННЯ / ПОМИЛКИ ─── */
+.gallery-skeleton {
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg, 12px);
+  background: #eee;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.gallery-feedback-container {
+  text-align: center;
+  padding: 4rem;
+}
+
+.gallery-feedback-icon {
+  font-size: 2.5rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.gallery-feedback-text {
+  color: #666;
+  margin: 0;
+}

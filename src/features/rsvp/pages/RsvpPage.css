@@ -1,0 +1,77 @@
+/* ─── ШАПКА СТОРІНКИ ─── */
+.rsvp-page-header {
+  background: var(--color-primary-light);
+  padding: var(--space-12) 0 var(--space-8);
+}
+
+.rsvp-page-subtitle {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+}
+
+.rsvp-page-title {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+}
+
+.rsvp-page-desc {
+  font-size: var(--text-base);
+  color: var(--color-text-muted);
+  max-width: 48ch;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ─── ТІЛО СТОРІНКИ ─── */
+.rsvp-page-body {
+  padding: var(--space-12) 0;
+}
+
+/* ─── ІНФО-БАНЕР (ДЛЯ НЕАВТОРИЗОВАНИХ) ─── */
+.rsvp-info-banner {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.rsvp-info-icon {
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.rsvp-info-text {
+  font-size: var(--text-sm);
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.rsvp-info-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease, text-decoration 0.2s ease;
+}
+
+.rsvp-info-btn:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* ─── КАРТКА З ФОРМОЮ ─── */
+.rsvp-card-container {
+  padding: var(--space-8);
+}

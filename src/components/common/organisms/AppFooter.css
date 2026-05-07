@@ -1,0 +1,63 @@
+/* ─── APP FOOTER СТИЛІ ─── */
+.footer-brand-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-text-inverse);
+  margin-bottom: var(--space-3);
+}
+
+.footer-brand-icon {
+  color: var(--color-primary);
+}
+
+.footer-brand-desc {
+  font-size: var(--text-sm);
+  color: rgba(250, 249, 246, 0.6);
+  max-width: 28ch;
+}
+
+.footer-heading {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(250, 249, 246, 0.4);
+  margin-bottom: var(--space-3);
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-nav-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  color: rgba(250, 249, 246, 0.65);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  text-align: left;
+}
+
+.footer-nav-btn:hover {
+  color: #faf9f6;
+}
+
+.footer-contact-list {
+  font-size: var(--text-sm);
+  color: rgba(250, 249, 246, 0.65);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(250, 249, 246, 0.1);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+  text-align: center;
+  font-size: var(--text-xs);
+  color: rgba(250, 249, 246, 0.35);
+}

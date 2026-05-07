@@ -1,0 +1,1 @@
+export { useEvents as default } from '../../../app/providers/EventsProvider';

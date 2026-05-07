@@ -1,0 +1,703 @@
+/* Базові контейнери */
+.admin-page-container {
+  min-height: 100vh;
+  background: #FAFAF8;
+}
+
+.admin-loading-wrapper,
+.admin-auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: #FAFAF8;
+}
+
+/* Шапка (Header) */
+.admin-header {
+  background: #2C3E50;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-logo-group,
+.admin-user-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admin-logo-icon {
+  color: #B7906C;
+  font-size: 1.5rem;
+}
+
+.admin-logo-title {
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.admin-user-email {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.9rem;
+}
+
+.admin-nav-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 6px 16px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+/* Навігація (Tabs) */
+.admin-tabs-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 0;
+}
+
+.admin-tab-btn {
+  padding: 0.75rem 1.5rem;
+  background: none;
+  cursor: pointer;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #6c757d;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s;
+  margin-bottom: -2px;
+}
+
+.admin-tab-btn.active {
+  border-bottom-color: #B7906C;
+  color: #B7906C;
+  font-weight: 700;
+}
+
+.admin-tab-badge {
+  background: #B7906C;
+  color: #fff;
+  border-radius: 50rem;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* Загальні UI елементи */
+.admin-status-badge {
+  border-radius: 50rem;
+  padding: 4px 12px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.status-pending { background: #fef3c7; color: #b07a00; border-color: #b07a00; }
+.status-confirmed { background: #d4edda; color: #155724; border-color: #155724; }
+.status-cancelled { background: #f8d7da; color: #721c24; border-color: #721c24; }
+
+/* ─── Інтерактивні кнопки ЗМІНИ статусу ─── */
+.status-btn-action {
+  background: transparent;
+  border-radius: 50rem;
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: 1.5px solid transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+/* 🟡 Очікує */
+.status-btn-action.pending {
+  color: #b07a00;
+  border-color: #b07a00;
+}
+.status-btn-action.pending:hover,
+.status-btn-action.pending.active {
+  background: #b07a00;
+  color: #fff;
+}
+
+/* 🟢 Підтверджено */
+.status-btn-action.confirmed {
+  color: #198754;
+  border-color: #198754;
+}
+.status-btn-action.confirmed:hover,
+.status-btn-action.confirmed.active {
+  background: #198754;
+  color: #fff;
+}
+
+/* 🔴 Скасовано */
+.status-btn-action.cancelled {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+.status-btn-action.cancelled:hover,
+.status-btn-action.cancelled.active {
+  background: #dc3545;
+  color: #fff;
+}
+.admin-input-wrapper {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.admin-input-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #495057;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.admin-input-field {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.admin-input-field.readonly {
+  background: #f8f9fa;
+  cursor: not-allowed;
+}
+
+.admin-textarea {
+  resize: vertical;
+}
+
+/* Секція списків */
+.admin-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  color: #2C3E50;
+  margin: 0;
+}
+
+.admin-search-input {
+  padding: 0.6rem 1rem;
+  border-radius: 0.6rem;
+  border: 1px solid #dee2e6;
+  font-size: 0.95rem;
+  width: 260px;
+}
+
+.admin-empty-state {
+  text-align: center;
+  padding: 4rem;
+  color: #6c757d;
+}
+
+.admin-empty-icon {
+  font-size: 3rem;
+}
+
+.admin-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Картки */
+.admin-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  border: 2px solid transparent;
+  transition: border 0.2s;
+}
+
+.admin-card.selected {
+  border-color: #B7906C;
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.admin-card-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #2C3E50;
+  margin-bottom: 4px;
+}
+
+.admin-card-subtitle {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+.admin-card-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Кнопки */
+.admin-btn-outline {
+  background: transparent;
+  border: 1.5px solid #B7906C;
+  color: #B7906C;
+  border-radius: 0.5rem;
+  padding: 5px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.admin-btn-danger {
+  background: transparent;
+  border: 1.5px solid #dc3545;
+  color: #dc3545;
+  border-radius: 0.5rem;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.admin-btn-primary {
+  font-size: 0.85rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #B7906C;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.admin-btn-secondary {
+  font-size: 0.85rem;
+  padding: 5px 12px;
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+  background: #fff;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.admin-btn-success {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.admin-btn-icon-danger {
+  background: none;
+  border: 1px solid #dc3545;
+  color: #dc3545;
+  border-radius: 0.5rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.admin-btn-text-danger {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 1.1rem;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.admin-btn-edit {
+  background: none;
+  border: 1px solid #dee2e6;
+  color: #495057;
+  border-radius: 0.4rem;
+  padding: 3px 8px;
+  cursor: pointer;
+  font-size: 0.82rem;
+}
+
+.admin-btn-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6c757d;
+  font-size: 1.4rem;
+}
+
+.admin-status-change-btn {
+  padding: 6px 18px;
+  border-radius: 50rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 2px solid;
+}
+
+/* Деталі та Редактор */
+.admin-details-section {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.admin-details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-details-label {
+  font-size: 0.82rem;
+  color: #6c757d;
+  font-weight: 600;
+}
+
+.admin-details-value {
+  font-size: 1rem;
+  color: #2C3E50;
+  margin-top: 2px;
+}
+
+/* Макет подій */
+.admin-events-layout {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+.admin-events-layout.with-sidebar {
+  grid-template-columns: 280px 1fr;
+}
+
+.admin-event-list-item {
+  padding: 1rem 1.25rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: border-color 0.2s;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-event-list-item.selected {
+  border-color: #B7906C;
+}
+
+.admin-event-editor {
+  background: #fff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+.admin-editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.75rem;
+}
+
+.admin-editor-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #2C3E50;
+  margin: 0;
+}
+
+.admin-image-section {
+  margin-bottom: 1.5rem;
+}
+
+.admin-section-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+.admin-image-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.admin-img-preview-box {
+  width: 100px;
+  height: 70px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #f8f9fa;
+  border: 1px solid #dee2e6;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-image-icon-placeholder {
+  font-size: 1.75rem;
+  color: #dee2e6;
+}
+
+.admin-image-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.admin-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.5rem;
+}
+
+.admin-save-message {
+  background: #d4edda;
+  color: #155724;
+  border-radius: 0.5rem;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Списки включень та послуг */
+.admin-items-section {
+  border-top: 1px solid #e9ecef;
+  padding-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.admin-item-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+}
+
+.admin-item-text {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.admin-item-price {
+  flex: 1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #B7906C;
+}
+
+.admin-item-input-large {
+  flex: 2;
+}
+
+.admin-item-input-small {
+  flex: 1;
+}
+
+.admin-add-row {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Утиліти */
+.text-bold { font-weight: 700; }
+.text-color-dark { color: #2C3E50; }
+.auth-icon { font-size: 3rem; color: #dee2e6; }
+.auth-icon-danger { font-size: 3rem; color: #dc3545; }
+.auth-text { color: #6c757d; margin: 0; }
+.spinner-auth { color: #B7906C; width: 3rem; height: 3rem; }
+.spinner-btn { border-width: 2px; }
+
+/* ─── АНІМАЦІЇ ТА ХОВЕРИ ДЛЯ КНОПОК ─── */
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+.admin-nav-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
+
+.admin-btn-primary:hover {
+  background: #9d7a5b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(183, 144, 108, 0.3);
+}
+
+.admin-btn-secondary:hover {
+  background: #f8f9fa;
+  border-color: #c6c8ca;
+}
+
+.admin-status-change-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.02);
+}
+
+.admin-btn-outline:hover {
+  background: #B7906C;
+  color: #fff;
+}
+
+.admin-btn-edit:hover {
+  background: #e9ecef;
+  border-color: #ced4da;
+}
+
+.admin-event-list-item:hover {
+  background: #fdfdfc;
+  border-color: rgba(183, 144, 108, 0.4);
+  transform: translateX(2px);
+}
+
+
+.admin-btn-danger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-btn-danger:hover {
+  background: #dc3545;
+  color: #fff;
+}
+
+.admin-btn-text-danger {
+  background: transparent !important;
+  border: none !important;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 6px;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin-btn-text-danger:hover {
+  background-color: rgba(220, 53, 69, 0.1) !important;
+  transform: scale(1.1);
+}
+/* ─── АДАПТАЦІЯ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (Екрани до 768px) ─── */
+@media (max-width: 768px) {
+  
+  /* 1. Шапка: Робимо елементи в колонку або приховуємо зайве */
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .admin-user-group {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  /* На мобільному краще сховати довгий email, щоб не ламав верстку */
+  .admin-user-email {
+    display: none; 
+  }
+
+  /* 2. Вкладки: Робимо горизонтальний скрол */
+  .admin-tabs-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 0; /* Прибираємо великі проміжки */
+    width: 100%;
+    overflow-x: visible; /* Вимикаємо горизонтальний скрол */
+  }
+
+  .admin-tabs-container::-webkit-scrollbar {
+    display: none; /* Ховаємо скролбар для краси (Chrome/Safari) */
+  }
+
+ .admin-tab-btn {
+    flex: 1; /* Рівномірно розтягуємо кожну кнопку на третину екрану */
+    justify-content: center; /* Центруємо іконку та текст */
+    padding: 0.6rem 0.2rem; /* Зменшуємо бокові відступи */
+    font-size: 0.8rem; /* Трохи менший шрифт, щоб точно все влізло */
+    gap: 5px; /* Зменшуємо відстань між іконкою та текстом */
+  }
+
+  /* 3. Пошук і заголовки: Розтягуємо на всю ширину */
+  .admin-search-input {
+    width: 100%;
+  }
+
+  /* 4. Картки замовлень: Розносимо кнопки на новий рядок */
+  .admin-card-header {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .admin-card-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

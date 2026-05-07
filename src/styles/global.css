@@ -1,0 +1,197 @@
+/* =============================================
+   Глобальні стилі — Ceremony Organizer
+   Дизайн: теплий, елегантний, 2026-style
+   ============================================= */
+
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700&f[]=instrument-serif@400&display=swap');
+
+:root {
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-body: 'Cabinet Grotesk', 'Helvetica Neue', sans-serif;
+
+  --color-bg:             #f8f6f2;
+  --color-surface:        #faf9f6;
+  --color-surface-2:      #fcfbf9;
+  --color-surface-offset: #f0ede8;
+  --color-border:         #ddd9d2;
+  --color-divider:        #e5e1db;
+
+  --color-text:           #2a2620;
+  --color-text-muted:     #6b6660;
+  --color-text-faint:     #aaa69f;
+  --color-text-inverse:   #faf9f6;
+
+  /* Акцент — теплий тераготовий */
+  --color-primary:        #b5744a;
+  --color-primary-hover:  #9a5e38;
+  --color-primary-active: #7d4a28;
+  --color-primary-light:  #f5ece5;
+
+  --color-success:        #3e7c2e;
+  --color-success-bg:     #eaf3e7;
+  --color-error:          #b02020;
+  --color-error-bg:       #faeaea;
+
+  --radius-sm:   0.375rem;
+  --radius-md:   0.625rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.5rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 3px rgba(42,38,32,0.07);
+  --shadow-md: 0 4px 16px rgba(42,38,32,0.10);
+  --shadow-lg: 0 12px 40px rgba(42,38,32,0.14);
+
+  --space-1: 0.25rem;  --space-2: 0.5rem;
+  --space-3: 0.75rem;  --space-4: 1rem;
+  --space-6: 1.5rem;   --space-8: 2rem;
+  --space-12: 3rem;    --space-16: 4rem;
+
+  --text-xs:   clamp(0.75rem,  0.7rem  + 0.25vw, 0.875rem);
+  --text-sm:   clamp(0.875rem, 0.8rem  + 0.35vw, 1rem);
+  --text-base: clamp(1rem,     0.95rem + 0.25vw, 1.125rem);
+  --text-lg:   clamp(1.125rem, 1rem    + 0.75vw, 1.5rem);
+  --text-xl:   clamp(1.5rem,   1.2rem  + 1.25vw, 2.25rem);
+  --text-2xl:  clamp(2rem,     1.2rem  + 2.5vw,  3.5rem);
+
+  --transition: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.65;
+  min-height: 100dvh;
+}
+h1,h2,h3,h4,h5 { font-family: var(--font-display); line-height: 1.2; }
+img { display: block; max-width: 100%; height: auto; }
+::selection { background: rgba(181,116,74,0.2); }
+:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 3px; border-radius: var(--radius-sm); }
+
+/* Hero секція */
+.hero-section {
+  background: linear-gradient(135deg, #fdf6ee 0%, #f5e8dc 50%, #fdf0e8 100%);
+  position: relative; overflow: hidden;
+}
+.hero-section::before {
+  content: '';
+  position: absolute; top: -60px; right: -80px;
+  width: 380px; height: 380px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(181,116,74,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Картки */
+.card-ceremony {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+  overflow: hidden;
+}
+.card-ceremony:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+/* Кнопки */
+.btn-primary-custom {
+  background-color: var(--color-primary); color: var(--color-text-inverse);
+  border: none; border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600;
+  cursor: pointer; transition: background-color var(--transition), box-shadow var(--transition);
+  display: inline-flex; align-items: center; gap: var(--space-2);
+}
+.btn-primary-custom:hover:not(:disabled) { background-color: var(--color-primary-hover); box-shadow: var(--shadow-sm); }
+.btn-primary-custom:disabled { opacity: 0.55; cursor: not-allowed; }
+
+.btn-outline-custom {
+  background: transparent; border: 1.5px solid var(--color-primary);
+  color: var(--color-primary); border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-body); font-size: var(--text-sm); font-weight: 600;
+  cursor: pointer; transition: all var(--transition);
+}
+.btn-outline-custom:hover:not(:disabled) { background: var(--color-primary-light); }
+
+/* Форми */
+.form-control-custom {
+  background: var(--color-surface-2); border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md); padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body); font-size: var(--text-base); color: var(--color-text);
+  width: 100%; transition: border-color var(--transition), box-shadow var(--transition);
+}
+.form-control-custom:focus {
+  outline: none; border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(181,116,74,0.15);
+}
+.form-control-custom.is-invalid { border-color: var(--color-error); }
+.form-label-custom {
+  font-size: var(--text-sm); font-weight: 600;
+  color: var(--color-text); margin-bottom: var(--space-2); display: block;
+}
+
+/* Alerts */
+.alert-success-custom {
+  background: var(--color-success-bg); color: var(--color-success);
+  border: 1px solid rgba(62,124,46,0.25); border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4); font-size: var(--text-sm);
+  display: flex; align-items: center; gap: var(--space-2);
+}
+.alert-error-custom {
+  background: var(--color-error-bg); color: var(--color-error);
+  border: 1px solid rgba(176,32,32,0.25); border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4); font-size: var(--text-sm);
+  display: flex; align-items: center; gap: var(--space-2);
+}
+
+/* Скелетон */
+@keyframes shimmer { 0%{background-position:-200% 0} 100%{background-position:200% 0} }
+.skeleton {
+  background: linear-gradient(90deg,var(--color-surface-offset) 25%,var(--color-divider) 50%,var(--color-surface-offset) 75%);
+  background-size: 200% 100%; animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* Navbar */
+.navbar-ceremony {
+  background: rgba(248,246,242,0.92);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-divider);
+}
+.navbar-brand-text { font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-text) !important; }
+.nav-link-custom { color: var(--color-text-muted) !important; font-size: var(--text-sm); font-weight: 500; transition: color var(--transition); }
+.nav-link-custom:hover, .nav-link-custom.active { color: var(--color-primary) !important; }
+.badge-user {
+  background: var(--color-primary-light); color: var(--color-primary);
+  border-radius: var(--radius-full); padding: 2px var(--space-3);
+  font-size: var(--text-xs); font-weight: 600;
+}
+
+/* Gallery */
+.gallery-item { overflow: hidden; border-radius: var(--radius-lg); aspect-ratio: 4/3; cursor: pointer; position: relative; }
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+.gallery-item:hover img { transform: scale(1.05); }
+.gallery-overlay {
+  position: absolute; inset: 0; background: rgba(42,38,32,0);
+  transition: background var(--transition); display: flex; align-items: center; justify-content: center;
+}
+.gallery-item:hover .gallery-overlay { background: rgba(42,38,32,0.25); }
+.gallery-overlay i { color: #fff; font-size: 1.75rem; opacity: 0; transform: scale(0.8); transition: opacity var(--transition), transform var(--transition); }
+.gallery-item:hover .gallery-overlay i { opacity: 1; transform: scale(1); }
+
+/* Footer */
+.footer-ceremony { background: var(--color-text); color: var(--color-text-inverse); padding: var(--space-12) 0 var(--space-8); }
+.footer-ceremony a { color: rgba(250,249,246,0.65); text-decoration: none; font-size: var(--text-sm); transition: color var(--transition); }
+.footer-ceremony a:hover { color: var(--color-text-inverse); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}

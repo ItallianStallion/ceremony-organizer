@@ -1,0 +1,24 @@
+/* ─── Стан завантаження / Помилки / Порожній стан ─── */
+
+.catalog-feedback-container {
+  text-align: center;
+  padding: var(--space-16);
+}
+
+.catalog-feedback-icon {
+  font-size: 2.5rem;
+  color: var(--color-text-faint);
+}
+
+.catalog-feedback-title {
+  font-family: var(--font-display);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+}
+
+.catalog-feedback-text {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  max-width: 36ch;
+  margin: 0 auto;
+}

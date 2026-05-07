@@ -1,0 +1,266 @@
+/* ─── ПАКЕТ: ЩО ВКЛЮЧЕНО ─── */
+.rsvp-package-includes {
+  background: #FAFAF8;
+  border: 1px solid rgba(181, 116, 74, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.rsvp-package-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #B7906C;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.rsvp-package-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.rsvp-package-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 1rem;
+  color: #2b2b2b;
+  line-height: 1.5;
+}
+
+.rsvp-package-icon {
+  color: #B7906C;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  margin-top: 2px;
+}
+
+.rsvp-package-footer {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(181, 116, 74, 0.2);
+  font-size: 0.95rem;
+  color: #6c757d;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ─── ДОДАТКОВІ ОПЦІЇ (ЧЕКБОКСИ) ─── */
+.rsvp-addon-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: #ffffff;
+  border: 1.5px solid #e9ecef;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rsvp-addon-label.checked {
+  background: #FAFAF8;
+  border-color: #B7906C;
+}
+
+.rsvp-addon-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.rsvp-addon-checkbox {
+  accent-color: #B7906C;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.rsvp-addon-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2C3E50;
+}
+
+.rsvp-addon-text.checked {
+  font-weight: 600;
+}
+
+.rsvp-addon-price {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #B7906C;
+  white-space: nowrap;
+}
+
+/* ─── СТАН УСПІХУ (SUCCESS) ─── */
+.rsvp-success-container {
+  text-align: center;
+  padding: 4rem 1rem;
+}
+
+.rsvp-success-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.rsvp-success-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #2C3E50;
+}
+
+.rsvp-success-text {
+  color: #6c757d;
+  font-size: 1rem;
+  max-width: 44ch;
+  margin: 0 auto 2rem;
+  line-height: 1.65;
+}
+
+.rsvp-success-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.rsvp-btn-primary {
+  background-color: #B7906C !important;
+  border-color: #B7906C !important;
+  color: #fff !important;
+}
+
+.rsvp-btn-outline {
+  color: #B7906C !important;
+  border-color: #B7906C !important;
+}
+
+/* ─── ФОРМА ТА СЕКЦІЇ ─── */
+.rsvp-section {
+  margin-bottom: 2.5rem;
+}
+
+.rsvp-section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6c757d;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/* ─── ПРЕВ'Ю ЦІНИ ─── */
+.rsvp-price-preview-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.rsvp-price-preview-card {
+  background: #FAFAF8;
+  border: 1px solid rgba(181, 116, 74, 0.2);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+}
+
+.rsvp-price-preview-label {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.rsvp-price-preview-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: #B7906C;
+  font-weight: 700;
+}
+
+/* ─── ПОЛЕ ДАТИ ─── */
+.rsvp-date-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #495057;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-date-required {
+  color: #B7906C;
+}
+
+.rsvp-date-error {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+}
+
+.rsvp-date-info {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* ─── ПІДСУМОК (ФУТЕР ФОРМИ) ─── */
+.rsvp-summary-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.rsvp-summary-label {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 4px;
+}
+
+.rsvp-summary-total {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  color: #B7906C;
+  font-weight: 700;
+}
+
+.rsvp-summary-details {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-top: 4px;
+}
+
+.rsvp-submit-btn {
+  min-width: 200px;
+  background-color: #B7906C !important;
+  border-color: #B7906C !important;
+  color: #fff !important;
+  padding: 10px 24px !important;
+  border-radius: 50rem !important;
+}
