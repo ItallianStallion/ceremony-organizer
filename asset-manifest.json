@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/ceremony-organizer/static/css/main.76ae31a1.css",
+    "main.js": "/ceremony-organizer/static/js/main.187279da.js",
+    "static/js/754.2fcdf46a.chunk.js": "/ceremony-organizer/static/js/754.2fcdf46a.chunk.js",
+    "static/media/bootstrap-icons.woff?": "/ceremony-organizer/static/media/bootstrap-icons.1295669cd4e305c97f2c.woff",
+    "static/media/bootstrap-icons.woff2?": "/ceremony-organizer/static/media/bootstrap-icons.92ea18a81d737146ff04.woff2",
+    "index.html": "/ceremony-organizer/index.html",
+    "main.76ae31a1.css.map": "/ceremony-organizer/static/css/main.76ae31a1.css.map",
+    "main.187279da.js.map": "/ceremony-organizer/static/js/main.187279da.js.map",
+    "754.2fcdf46a.chunk.js.map": "/ceremony-organizer/static/js/754.2fcdf46a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76ae31a1.css",
+    "static/js/main.187279da.js"
+  ]
+}
